@@ -1,11 +1,10 @@
-sudo apt-get install software-properties-common
-sudo apt-get install python-software-properties
+sudo apt-get install -y software-properties-common python-software-properties
 
 sudo add-apt-repository ppa:pi-rho/dev
 
 sudo apt-get update
 
-sudo apt-get install tmux tmux-next
+sudo apt-get install -y tmux tmux-next
 
 cd ~/.dotfiles/tmux
 
