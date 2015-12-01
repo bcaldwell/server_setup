@@ -1,7 +1,5 @@
 #!/bin/sh\
 
-sh zsh.sh
-
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get install -y build-essential curl vim tmux git
 
 if [ ! -f ~/.dotfiles ]; then
@@ -16,5 +14,7 @@ make all
 
 cd ~/.dotfiles/tmux
 make all
+
+cd "$(dirname "$0")"
 
 sh zsh.sh
