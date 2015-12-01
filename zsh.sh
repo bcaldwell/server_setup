@@ -1,6 +1,18 @@
 #!/bin/sh\
-sudo apt-get update && sudo apt-get install -y curl vim git zsh zsh-doc
-echo Installing zprezto
 
-zsh zprezto.sh
+sudo apt-get update && sudo apt-get install -y build-essential curl vim git zsh
 
+if [ ! -f ~/.dotfiles ]; then
+    git clone https://github.com/benjamincaldwell/.dotfiles "${ZDOTDIR:-$HOME}/.dotfiles"
+fi
+
+cd "${ZDOTDIR:-$HOME}/.dotfiles/zsh"
+
+make all
+
+#chsh -s /bin/zsh
+sudo chsh -s $(which zsh) $(whoami)
+
+echo "SUCCESS!!!!"
+source ~/.zprofile
+source ~/.zshrc
