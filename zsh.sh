@@ -10,9 +10,12 @@ cd "${ZDOTDIR:-$HOME}/.dotfiles/zsh"
 
 make all
 
+
+
+source ~/.zprofile
+source ~/.zshrc
+
 #chsh -s /bin/zsh
 sudo chsh -s $(which zsh) $(whoami)
 
 echo "SUCCESS!!!!"
-source ~/.zprofile
-source ~/.zshrc
