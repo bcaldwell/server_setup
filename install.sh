@@ -1,7 +1,7 @@
 install() {
     if which apt-get > /dev/null; then
-        apt-get
+        sudo apt-get
     else
-        yum
+        sudo yum
     fi
 }
