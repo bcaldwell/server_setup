@@ -1,6 +1,13 @@
 #!/bin/sh\
 
-sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get install -y build-essential curl vim git
+my_dir="$(dirname "$0")"
+
+"$my_dir/installer.sh"
+
+sudo yum groupinstall -y Development Tools
+sudo apt-get install -y build-essential
+
+installer -y update && installer -y upgrade && installer install -y build-essential curl vim git
 
 if [ ! -f ~/.dotfiles ]; then
     git clone https://github.com/benjamincaldwell/.dotfiles "${ZDOTDIR:-$HOME}/.dotfiles"
