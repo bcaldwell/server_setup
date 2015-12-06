@@ -1,7 +1,7 @@
 install() {
     if which apt-get > /dev/null; then
-        sudo apt-get
+        sudo apt-get $@
     else
-        sudo yum
+        sudo yum $@
     fi
 }
