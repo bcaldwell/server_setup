@@ -1,4 +1,4 @@
-install() {
+installer() {
     if which apt-get > /dev/null; then
         sudo apt-get $@
     else
