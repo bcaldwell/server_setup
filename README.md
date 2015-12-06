@@ -1,0 +1,1 @@
+some scripts I use for setting up servers
