@@ -11,3 +11,5 @@ sudo ufw allow 433 https
 sudo ufw logging on
 
 sudo ufw status numbered
+
+sudo ufw status verbose
